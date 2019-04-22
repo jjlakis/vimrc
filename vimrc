@@ -1,3 +1,9 @@
+" VIM:
+" ./configure --enable-pythoninterp --prefix=/usr
+" make && sudo make install
+" Reqs on da system:
+" pip3 install --user --upgrade pynvim
+
 set mouse=
 set ttymouse=
 set backspace=indent,eol,start
