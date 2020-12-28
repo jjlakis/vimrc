@@ -1,3 +1,37 @@
+""" Vundle configuration
+
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"Plugin 'gmarik/Vundle.vim'
+"Plugin 'tmhedberg/SimpylFold'
+"Plugin 'vim-scripts/indentpython.vim'
+"Bundle 'Valloric/YouCompleteMe'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Correct python indentation
+"au BufNewFile,BufRead *.py
+"    \ set tabstop=4
+"    \ set softtabstop=4
+"    \ set shiftwidth=4
+"    \ set textwidth=79
+"    \ set expandtab
+"    \ set autoindent
+"    \ set fileformat=unix
+
+"au BufNewFile,BufRead *.js, *.html, *.css
+"    \ set tabstop=2
+"    \ set softtabstop=2
+"    \ set shiftwidth=2                  
+
+
+
 " Misc
 set mouse=
 syntax on
@@ -26,6 +60,10 @@ nnoremap <C-e>e :Ex<CR>
 nnoremap <C-e>s :Sex<CR>
 nnoremap <C-e>v :Vex<CR>
 
+" Folding
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
 
 
 
@@ -35,3 +73,6 @@ nnoremap <C-e>v :Vex<CR>
 " <C-w> 50 < - -------||----- shorter + 50
 
 " Tabs:
+
+
+
