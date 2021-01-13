@@ -49,16 +49,18 @@ let g:netrw_liststyle = 3
 " ---- Mappings
 
 " Splits
-nnoremap <C-w><BS> <C-w>10<Left>
+nnoremap <C-w><BS> <C-w>10<Left> \| :let g:netrw_browse_split=4 <CR>
 
 " Tabs
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+nnoremap <Right> :tabnext<CR>
+nnoremap <Left> :tabprevious<CR>
+" New map with explorer and 2 windows
+nnoremap <C-T> :tabnew \| :let g:netrw_browse_split=4 \| :Vex \| <CR>
 
 " Explorer
-nnoremap <C-e>e :Ex<CR>
-nnoremap <C-e>s :Sex<CR>
-nnoremap <C-e>v :Vex<CR>
+nnoremap <C-e>e :let g:netrw_browse_split=0 \| :Ex <CR>
+nnoremap <C-e>s :let g:netrw_browse_split=4 \| :Sex<CR>
+nnoremap <C-e>v :let g:netrw_browse_split=4 \| :Vex<CR>
 
 " Folding
 set foldmethod=indent
