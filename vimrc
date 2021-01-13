@@ -52,9 +52,9 @@ let g:netrw_liststyle = 3
 nnoremap <C-w><BS> <C-w>10<Left> \| :let g:netrw_browse_split=4 <CR>
 
 " Tabs
-nnoremap <Right> :tabnext<CR>
-nnoremap <Left> :tabprevious<CR>
-" New map with explorer and 2 windows
+nnoremap > :tabnext<CR>
+nnoremap < :tabprevious<CR>
+" New map with explorer
 nnoremap <C-T> :tabnew \| :let g:netrw_browse_split=4 \| :Vex \| <CR>
 
 " Explorer
@@ -67,7 +67,16 @@ set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
 
+" Cursor
+" w, e - forward (beggining, end of the word). q - back
+nnoremap q b
+nnoremap <S-j> 10j
+nnoremap <S-k> 10k
 
+" Words
+" * - search for the current word
+" select current word
+nnoremap " viw 
 
 " To bare in mind
 " Windows:
