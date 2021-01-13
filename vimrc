@@ -7,10 +7,12 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-"Plugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
+" cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer --rust-completer may be necessary
+" https://stackoverflow.com/questions/65284572/your-c-compiler-does-not-fully-support-c17
+Bundle 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang'}
 "Plugin 'tmhedberg/SimpylFold'
 "Plugin 'vim-scripts/indentpython.vim'
-"Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
