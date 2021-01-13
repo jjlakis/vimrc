@@ -17,23 +17,6 @@ Bundle 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Correct python indentation
-"au BufNewFile,BufRead *.py
-"    \ set tabstop=4
-"    \ set softtabstop=4
-"    \ set shiftwidth=4
-"    \ set textwidth=79
-"    \ set expandtab
-"    \ set autoindent
-"    \ set fileformat=unix
-
-"au BufNewFile,BufRead *.js, *.html, *.css
-"    \ set tabstop=2
-"    \ set softtabstop=2
-"    \ set shiftwidth=2                  
-
-
-
 " Misc
 set mouse=
 syntax on
@@ -85,7 +68,10 @@ nnoremap " viw
 " <C-w> 50 > - current window larger + 50
 " <C-w> 50 < - -------||----- shorter + 50
 
-" Tabs:
+" Go to definition
+nnoremap g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" Ctrl + ^ - powroc do poprzedniego okna
+
 
 
 
